@@ -6,7 +6,7 @@
     "license": "MIT",
     "dependencies": {
         "express": "^4.17.1",
-        "express-handebars": "^5.1.0",
+        "express-handlebars": "^5.1.0",
         "handlebars": "^4.7.6",
         "bytes": "^3.1.0",
         "minimist": ">=1.2.5",
