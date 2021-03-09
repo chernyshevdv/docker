@@ -6,5 +6,6 @@ $ cd docker/single-container
 $ docker login
 $ docker image build -t chernyshevdv/gsd:first-ctr .
 $ docker image push chernyshevdv/gsd:first-ctr
-$ docker container run -d --name web -p 8000:8080
+$ docker container run -d --name web -p 8000:8080 chernyshevdv/gsd:first-ctr
 ```
+To just run a container from an existing image at the hub, run the last command above! 
