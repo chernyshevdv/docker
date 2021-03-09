@@ -1,7 +1,7 @@
-var express = reqiure('express');
+var express = require('express');
 var exphbrs = require('express-handlebars');
 var app = express();
-var os = reqiure('os');
+var os = require('os');
 var morgan = require('morgan');
 
 app.engine('handlebars', exphbrs({defaultLayout: 'main'}));
