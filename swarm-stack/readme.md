@@ -93,5 +93,15 @@ $ docker stack services counter
 ```
 And we can see each container:
 ```
-$ docker stack ps counter
+dmitrychernyshev@MacBook-Air-Dmitry swarm-stack % docker stack ps counter
+ID             NAME               IMAGE                          NODE             DESIRED STATE   CURRENT STATE                ERROR     PORTS
+pqe6gkydiuc4   counter_redis.1    redis:alpine                   docker-desktop   Running         Running 6 minutes ago
+x76ygklzycl1   counter_web-fe.1   chernyshevdv/gsd:swarm-stack   docker-desktop   Running         Running 6 minutes ago
+ltugiaqzxemo   counter_web-fe.2   chernyshevdv/gsd:swarm-stack   docker-desktop   Running         Running about a minute ago
+i0htfj5yylcy   counter_web-fe.3   chernyshevdv/gsd:swarm-stack   docker-desktop   Running         Running about a minute ago
+```
+### Increase/decrease number of tasks
+To alter number tasks running, alter `docker-compose.yml` file (section `deploy:`) and re-deploy it with the following command:
+```
+$ docker stack deploy -c docker-composer.yml counter
 ```
